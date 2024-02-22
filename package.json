@@ -1,0 +1,19 @@
+{
+  "name": "virtualmuseum",
+  "version": "1.0.0",
+  "description": "luotn's bechlor dissertation project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luotn/virtualMuseum.git"
+  },
+  "author": "Tianning Luo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luotn/virtualMuseum/issues"
+  },
+  "homepage": "https://github.com/luotn/virtualMuseum#readme"
+}
