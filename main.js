@@ -31,14 +31,14 @@ async function init() {
     // controls.update();
 
     const rgbeLoader = new RGBELoader()
-        .setPath( 'textures/equirectangular/' );
+        .setPath( 'textures/skybox/' );
 
     const usdzLoader = new USDZLoader()
         .setPath( 'models/usdz/' );
 
     const [ texture, model ] = await Promise.all( [
         rgbeLoader.loadAsync( 'venice_sunset_1k.hdr' ),
-        usdzLoader.loadAsync( 'saeukkang.usdz' ),
+        usdzLoader.loadAsync( '倒装壶（带底）.usdz' ),
     ] );
 
     // environment
@@ -46,7 +46,7 @@ async function init() {
     texture.mapping = THREE.EquirectangularReflectionMapping;
 
     scene.background = texture;
-    scene.backgroundBlurriness = 0.5;
+    // scene.backgroundBlurriness = 0.1;
     scene.environment = texture;
 
     // model
