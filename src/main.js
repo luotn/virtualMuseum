@@ -1,4 +1,4 @@
-function changeToDefaultLanguage(page){
+function init(page){
     const defaultLang = localStorage.getItem('demoLanguage');
     if(defaultLang == null) {
         const langNative = navigator.language;
@@ -10,6 +10,10 @@ function changeToDefaultLanguage(page){
         }
     }
     changeTo(localStorage.getItem('demoLanguage'), page);
+}
+
+function changeToSetLanguage(page) {
+    changeTo(localStorage.getItem('demoLanguage'), page)
 }
 
 function changeLanguage(page)
@@ -33,8 +37,8 @@ function changeTo(lang, page)
             let target = langObj.pages;
             if(page == 'index')
                 target = target.index;
-            else if(page == 'menu')
-                target = target.menu;
+            else if (page == 'detail')
+                target = target.detail
 
             if(lang == 'cn')
                 target = target.cn;
@@ -42,20 +46,10 @@ function changeTo(lang, page)
                 target = target.en;
 
             for (let key in target) {
-                if(target[`${key}`].name != undefined) {
-                    let type = target[`${key}`];
-                    document.getElementById(`${key}`).innerHTML = type.name;
-                    for(let cate in type.category) {
-                        let category = type.category[`${cate}`];
-                        document.getElementById(`${cate}`).innerHTML = category.name;
-                        document.getElementById(`${cate}` + '_menu').innerHTML = category.name;
-                        for(let item in category) {
-                            if(`${item}` != "name")
-                                document.getElementById(`${item}`).innerHTML = `${category[item]}`;
-                        }
-                    }
-                } else
-                    document.getElementById(`${key}`).innerHTML = `${target[key]}`;
+                let elements = document.getElementsByName(`${key}`);
+                for(let i = 0; i < elements.length; i++) {
+                    elements.item(i).innerHTML = `${target[key]}`;
+                }
             }
         });
 }

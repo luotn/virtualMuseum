@@ -5,12 +5,38 @@
         "index": {
             "cn": {
                 "title": "虚拟博物馆演示",
-                "brand": "虚拟博物馆"
+                "brand": "虚拟博物馆",
+                "relics": "文物",
+                "more_detail": "详细信息",
+                "teapot": "五代耀州窑青釉刻花提梁倒流壶",
+                "teapot-description": "又称青釉提梁倒注瓷壶，是五代时期的瓷器，1968年出土于陕西彬县，现藏陕西历史博物馆。",
+                "dongbu": "东布壶",
+                "dongbu-description": "具有结实耐用，便于游牧携带的特点。为蒙古民族喜用的盛奶茶及酒的器皿，现藏于中国民族博物馆。",
+                "items": "物品",
+                "fails": "失败的模型"
             },
             "en": {
                 "title": "Virtual Museum Demo",
+                "brand": "Virtual Museum",
+                "relics": "Relics",
+                "more_detail": "More",
+                "teapot": "Yaozhou Kiln Floral Carved Celadon Bottom Filled Pot",
+                "teapot-description": "From the five-dynasty period. Unearthed in Bin County, Shaanxi Province in 1968. Now in Shaanxi History Museum.",
+                "dongbu": "Dongbu Kettle (For Wine and Milky Tea)",
+                "dongbu-description": "By the mongolian ethnic. Durable, easy to carry for nomads. Now in Chinese National Museum of Ethnology.",
+                "items": "Items",
+                "fails": "Failed Scans"
+            }
+        },
+        "detail": {
+            "cn": {
+                "title": "虚拟博物馆演示 - 详情页",
+                "brand": "虚拟博物馆"
+            },
+            "en": {
+                "title": "Virtual Museum Demo - Details",
                 "brand": "Virtual Museum"
             }
-        }       
+        }
     }
 }

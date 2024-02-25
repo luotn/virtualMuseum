@@ -1,12 +1,20 @@
 @media (prefers-color-scheme: dark) {
-    body{
+    body, .accordion-body, .accordion-button, .card{
         background-color: rgb(30, 33, 36);
         color: white;
     }
 
-    a, a:hover{
-        color: white;
-    }
+	img{
+		background-color: white;
+	}
+
+	.card {
+		border-color: gray;
+	}
+	
+	a, a.hover {
+		color: white;
+	}
 }
 
 @media (prefers-color-scheme: light) {
@@ -20,9 +28,38 @@
     }
 }
 
-#navbar {
+a, a:hover{
+	text-decoration: none;
+}
+
+#navbar-brand, #languageSelector {
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+[name=exhibits] {
+	padding: 10px;
+}
+
+.card {
+	margin: 10px;
+}
+
+.card-img-top {
+	margin-top: 12px;
+}
+
+[name=navbar] {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#spacer {
+	height: 70px;
+}
+
+img {
+	border-radius: 5px;
 }
 
 #footer{
@@ -36,4 +73,5 @@
     border-top: 1px solid gray;
     background-color: white;
     color: black;
+	z-index: 5;
 }

@@ -3,27 +3,81 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title id='title'>Virtual Museum Demo</title>
+        <title name='title'>Virtual Museum Demo</title>
         <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
         <link href="/src/main.css" rel="stylesheet" crossorigin="anonymous">
     </head>
-    <body  onload="changeToDefaultLanguage('index')">
+    <body  onload="init('index')">
+        <a id="top"></a>
         <!-- Navbar -->
         <nav class="navbar sticky-top navbar-dark bg-dark" id="navbar">
             <div class="navbar-brand" id="navbar-brand">
-                <a id="brand">Virtual Museum Demo</a>
+                <a name="brand" href="index.html">Virtual Museum Demo</a>
             </div>
-            <nav aria-label="breadcrumb justify-content-center">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page">Home</li>
-                </ol>
-            </nav>
             <div class="justify-content-end" onclick="changeLanguage('index')" id="languageSelector" style="color: white;"><a id="en">En</a> / <a id="cn">中</a></div>
         </nav>
 
-       
+        <div class="accordion" id="exhibits">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" name="relics" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Relics
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#muti">
+                    <div class="accordion-body">
+                        <div class="container text-center">
+                            <div class="row justify-content-center">
+                                <div class="card col-md-3" style="width: 18rem;">
+                                    <img src="/public/img/teapot.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" name="teapot">Teapot</h5>
+                                        <p class="card-text" name="teapot-description">Teapot Description</p>
+                                        <a href="#" class="btn btn-primary" name="more_detail">More Detail</a>
+                                    </div>
+                                </div>
+        
+                                <div class="card col-md-3" style="width: 18rem;">
+                                    <img src="/public/img/dongbu.png" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" name="dongbu">Dongbu Kettle</h5>
+                                        <p class="card-text" name="dongbu-description">Dongbu Description</p>
+                                        <a href="#" class="btn btn-primary" name="more_detail">More Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" name="items" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Items
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#muti">
+                    <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" name="fails" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Fails
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#muti">
+                    <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <a href="/src/modelviewer.html">Go to model viewer</a>
+        <div id="spacer"></div>
 
         <!-- 尾注 -->
         <div id="footer">
