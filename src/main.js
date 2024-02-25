@@ -1,77 +1,68 @@
-import * as THREE from 'three'
-// './node_modules/three/build/three.module.js';
-
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
-import { USDZLoader } from 'three/addons/loaders/USDZLoader.js';
-
-let camera, scene, renderer;
-
-init();
-animate();
-
-async function init() {
-
-    camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 0.1, 100 );
-    camera.position.set( 0, 0.75, - 1.5 );
-
-    scene = new THREE.Scene();
-
-    renderer = new THREE.WebGLRenderer( { antialias: true } );
-    renderer.setPixelRatio( window.devicePixelRatio );
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 2.0;
-    document.body.appendChild( renderer.domElement );
-
-    const controls = new OrbitControls( camera, renderer.domElement );
-    controls.minDistance = 1;
-    controls.maxDistance = 8;
-    // controls.target.y = 15;
-    // controls.update();
-
-    const rgbeLoader = new RGBELoader()
-        .setPath( '../textures/skybox/' );
-
-    const usdzLoader = new USDZLoader()
-        .setPath( '../models/usdz/' );
-
-    const [ texture, model ] = await Promise.all( [
-        rgbeLoader.loadAsync( 'Bruynzeel_room_museum.hdr' ),
-        // usdzLoader.loadAsync( '倒装壶（带底）.usdz' ),
-    ] );
-
-    // environment
-
-    texture.mapping = THREE.EquirectangularReflectionMapping;
-
-    scene.background = texture;
-    scene.backgroundBlurriness = 0.05;
-    scene.environment = texture;
-
-    // model
-
-    // model.position.y = 0.25;
-    // model.position.z = - 0.25;
-    // scene.add( model );
-
-    window.addEventListener( 'resize', onWindowResize );
-
+function changeToDefaultLanguage(page){
+    const defaultLang = localStorage.getItem('demoLanguage');
+    if(defaultLang == null) {
+        const langNative = navigator.language;
+        if(/^zh\b/.test(langNative)) {
+            localStorage.setItem('demoLanguage', 'cn');
+        }
+        else {
+            localStorage.setItem('demoLanguage', 'en');
+        }
+    }
+    changeTo(localStorage.getItem('demoLanguage'), page);
 }
 
-function onWindowResize() {
-
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-
+function changeLanguage(page)
+{
+    let lang = localStorage.getItem('demoLanguage');
+    if(lang == 'en'){
+        localStorage.setItem('demoLanguage', 'cn');
+    } else{
+        localStorage.setItem('demoLanguage', 'en');
+    }
+    changeTo(localStorage.getItem('demoLanguage'), page);
 }
 
-function animate() {
+function changeTo(lang, page)
+{
+    console.log("Changing to " + lang);
+    updateSelector(lang);
+    fetch("src/lang.json")
+        .then(response => response.json())
+        .then(langObj => {
+            let target = langObj.pages;
+            if(page == 'index')
+                target = target.index;
+            else if(page == 'menu')
+                target = target.menu;
 
-    requestAnimationFrame( animate );
+            if(lang == 'cn')
+                target = target.cn;
+            else if(lang == 'en')
+                target = target.en;
 
-    renderer.render( scene, camera );
+            for (let key in target) {
+                if(target[`${key}`].name != undefined) {
+                    let type = target[`${key}`];
+                    document.getElementById(`${key}`).innerHTML = type.name;
+                    for(let cate in type.category) {
+                        let category = type.category[`${cate}`];
+                        document.getElementById(`${cate}`).innerHTML = category.name;
+                        document.getElementById(`${cate}` + '_menu').innerHTML = category.name;
+                        for(let item in category) {
+                            if(`${item}` != "name")
+                                document.getElementById(`${item}`).innerHTML = `${category[item]}`;
+                        }
+                    }
+                } else
+                    document.getElementById(`${key}`).innerHTML = `${target[key]}`;
+            }
+        });
+}
 
+function updateSelector(lang)
+{
+    document.getElementById("en").style.textDecoration = "inherit";
+    document.getElementById("cn").style.textDecoration = "inherit";
+    document.getElementById(lang).style.textDecoration = "underline";
 }

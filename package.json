@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/luotn/virtualMuseum#readme",
   "dependencies": {
-    "three": "^0.161.0"
+    "bootstrap": "^5.3.3"
   }
 }

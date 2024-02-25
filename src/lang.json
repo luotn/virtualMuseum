@@ -1,0 +1,16 @@
+{
+    "stie": "virtualmuseum.demo",
+    "labguages": ["cn", "en"],
+    "pages": {
+        "index": {
+            "cn": {
+                "title": "虚拟博物馆演示",
+                "brand": "虚拟博物馆"
+            },
+            "en": {
+                "title": "Virtual Museum Demo",
+                "brand": "Virtual Museum"
+            }
+        }       
+    }
+}

@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Museum Demo</title>
-</head>
-<body>
-    <a href="/src/modelviewer.html">Go to model viewer</a>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title id='title'>Virtual Museum Demo</title>
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
+        <link href="/src/main.css" rel="stylesheet" crossorigin="anonymous">
+    </head>
+    <body  onload="changeToDefaultLanguage('index')">
+        <!-- Navbar -->
+        <nav class="navbar sticky-top navbar-dark bg-dark" id="navbar">
+            <div class="navbar-brand" id="navbar-brand">
+                <a id="brand">Virtual Museum Demo</a>
+            </div>
+            <nav aria-label="breadcrumb justify-content-center">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+            <div class="justify-content-end" onclick="changeLanguage('index')" id="languageSelector" style="color: white;"><a id="en">En</a> / <a id="cn">中</a></div>
+        </nav>
+
+       
+
+        <a href="/src/modelviewer.html">Go to model viewer</a>
+
+        <!-- 尾注 -->
+        <div id="footer">
+            Ⓒ2024 Tianning (Jerry) Luo, SID:2604067
+        </div>
+
+
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="/src/main.js" crossorigin="anonymous"></script>
+    </body>
 </html>
