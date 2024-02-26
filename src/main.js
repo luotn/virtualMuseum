@@ -37,8 +37,10 @@ function changeTo(lang, page)
             let target = langObj.pages;
             if(page == 'index')
                 target = target.index;
-            else if (page == 'detail')
-                target = target.detail
+            else if (page == 'detail') {
+                target = target.detail;
+                changeDescription(lang, target);
+            }
 
             if(lang == 'cn')
                 target = target.cn;

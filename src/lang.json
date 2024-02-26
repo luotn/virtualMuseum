@@ -31,11 +31,45 @@
         "detail": {
             "cn": {
                 "title": "虚拟博物馆演示 - 详情页",
-                "brand": "虚拟博物馆"
+                "brand": "虚拟博物馆",
+                "exhibits": [
+                    {
+                        "wrong": {
+                            "name": "wrong",
+                            "description": "<h2>错误的链接</h2><br><p>请从主页访问本页面。</p><br><p style=\"font-size: small;\">如果你知道你在干什么的话也可以手动输入查询链接(query link)。</p><br><p>来都来了，随便看个模型吧。</p>",
+                            "model": "倒装壶（带底）.usdz",
+                            "preview": "teapot.png"
+                        }
+                    }, {
+                        "teapot": {
+                            "name": "teapot",
+                            "description": "<h2>茶壶</h2><br><p>请从主页访问本页面。</p><br><p style=\"font-size: small;\">如果你知道你在干什么的话也可以手动输入查询链接(query link)。</p><br><p>来都来了，随便看个模型吧。</p>",
+                            "model": "倒装壶（带底）.usdz",
+                            "preview": "teapot-ar.png"
+                        }
+                    }
+                ]
             },
             "en": {
                 "title": "Virtual Museum Demo - Details",
-                "brand": "Virtual Museum"
+                "brand": "Virtual Museum",
+                "exhibits": [
+                    {
+                        "wrong": {
+                            "name": "wrong",
+                            "description": "<h2>Wrong Link</h2><br><p>Please visit this link from our index page.</p><br><p style=\"font-size: small;\">Or type the query link manually if you know what you are doing.</p><br><p>While you are here, here's a model to look at.</p>",
+                            "model": "倒装壶（带底）.usdz",
+                            "preview": "teapot.png"
+                        }
+                    }, {
+                        "teapot": {
+                            "name": "teapot",
+                            "description": "<h2>错误的链接</h2><br><p>请从主页访问本页面。</p><br><p style=\"font-size: small;\">如果你知道你在干什么的话也可以手动输入查询链接(query link)。</p><br><p>来都来了，随便看个模型吧。</p>",
+                            "model": "倒装壶（带底）.usdz",
+                            "preview": "teapot-ar.png"
+                        }
+                    }
+                ]
             }
         }
     }

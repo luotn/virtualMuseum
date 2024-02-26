@@ -6,17 +6,45 @@
     <title name="title">Virtual Museum Demo - Detail</title>
     <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
     <link href="/src/main.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="/src/detail.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 <body onload="changeToSetLanguage('detail'), getViewing()">
     <!-- Navbar -->
     <nav class="navbar sticky-top navbar-dark bg-dark" id="navbar">
         <div class="navbar-brand" id="navbar-brand">
-            <a name="brand" href="index.html"><i class="glyphicon glyphicon-cloud"></i>Virtual Museum</a>
+            <a name="brand" href="index.html">
+                Virtual Museum
+            </a>
         </div>
         <div class="justify-content-end" onclick="changeLanguage('detail')" id="languageSelector" style="color: white;"><a id="en">En</a> / <a id="cn">中</a></div>
     </nav>
 
+    <div id="detail-wrap" class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col">
+                <a href="/public/models/usdz/倒装壶（带底）.usdz" rel="ar" id="ar-model">
+                    <img style="width: 100%; max-width: 480px;" src="/public/img/teapot-ar.png" id="ar-preview">
+                </a>
+            </div>
+        </div>
+        <div class="row justify-content-center" id="description">
+            <h2>Wrong Link</h2>
+            <br>
+            <p>Please visit this link from our index page.</p>
+            <br>
+            <p style="font-size: small;">Or type the query link manually if you know what you are doing.</p>
+            <br>
+            <p>While you are here, here's a model to look at.</p>
+        </div>
+    </div>
 
+
+    <div id="spacer"></div>
+
+    <!-- Footer -->
+    <div id="footer">
+        Ⓒ2024 Tianning (Jerry) Luo, SID:2604067
+    </div>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="/src/main.js" crossorigin="anonymous"></script>
