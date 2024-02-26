@@ -12,8 +12,10 @@
                 "teapot-description": "又称青釉提梁倒注瓷壶，是五代时期的瓷器，1968年出土于陕西彬县，现藏陕西历史博物馆。",
                 "dongbu": "东布壶",
                 "dongbu-description": "具有结实耐用，便于游牧携带的特点。为蒙古民族喜用的盛奶茶及酒的器皿，现藏于中国民族博物馆。",
+                "cup": "公道杯",
+                "cup-description": "亦名九龙杯或戒贪杯，用九龙杯饮酒之时，只要不斟满则与常杯无异。若斟得太满则酒会从底孔完全流光。",
                 "items": "物品",
-                "fails": "失败的模型"
+                "fails": "限制和挑战"
             },
             "en": {
                 "title": "Virtual Museum Demo",
@@ -22,10 +24,12 @@
                 "more_detail": "More",
                 "teapot": "Yaozhou Kiln Floral Carved Celadon Bottom-filling Pot",
                 "teapot-description": "From the five-dynasty period. Unearthed in Bin County, Shaanxi Province in 1968. Now in Shaanxi History Museum.",
-                "dongbu": "Dongbu Kettle (For Wine and Milky Tea)",
-                "dongbu-description": "By the mongolian ethnic. Durable, easy to carry for nomads. Now in Chinese National Museum of Ethnology.",
+                "dongbu": "Dongbu Kettle",
+                "dongbu-description": "By the mongolian ethnic. Durable, easy to carry wine and milk tea for nomads. Now in Chinese National Museum of Ethnology.",
+                "cup": "Cup of Justice",
+                "cup-description": "Also known as Pythagorean cup or Greedy Cup. When it is filled beyond a certain point, a siphoning effect causes the cup to drain its entire contents through the base.",
                 "items": "Items",
-                "fails": "Failed Scans"
+                "fails": "Limitation and Challenges"
             }
         },
         "detail": {
@@ -55,6 +59,12 @@
                     "description": "dongbu_cn.html",
                     "preview": "dongbu.png",
                     "model": "蒙古族茶壶.usdz"
+                },
+                "cup": {
+                    "name": "cup",
+                    "description": "cup_cn.html",
+                    "preview": "cup-ar.png",
+                    "model": "公道杯.usdz"
                 }
             }
         }

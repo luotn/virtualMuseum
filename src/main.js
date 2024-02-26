@@ -29,6 +29,7 @@ function changeLanguage(page)
 
 function changeTo(lang, page)
 {
+    document.documentElement.lang = lang;
     console.log("Changing to " + lang);
     updateSelector(lang);
     fetch("src/lang.json")

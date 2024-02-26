@@ -13,7 +13,7 @@
 	}
 	
 	a, a.hover {
-		color: white;
+		color: white !important;
 	}
 }
 
@@ -32,8 +32,8 @@ a, a:hover{
 	text-decoration: none;
 }
 
-[name="brand"]{
-    color: white;
+[name="brand"], [name="brand"].hover{
+    color: white !important;
 }
 
 #navbar-brand, #languageSelector {
