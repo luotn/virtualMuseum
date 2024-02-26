@@ -35,22 +35,23 @@ function changeTo(lang, page)
         .then(response => response.json())
         .then(langObj => {
             let target = langObj.pages;
-            if(page == 'index')
+            if(page === 'index')
                 target = target.index;
-            else if (page == 'detail') {
+            else if (page === 'detail') {
                 target = target.detail;
                 changeDescription(lang, target);
             }
 
-            if(lang == 'cn')
+            if(lang === 'cn')
                 target = target.cn;
-            else if(lang == 'en')
+            else if(lang === 'en')
                 target = target.en;
 
             for (let key in target) {
-                let elements = document.getElementsByName(`${key}`);
-                for(let i = 0; i < elements.length; i++) {
-                    elements.item(i).innerHTML = `${target[key]}`;
+                if(key !== "exhibits") {
+                    let elements = document.getElementsByName(`${key}`);
+                    for(let i = 0; i < elements.length; i++)
+                        elements.item(i).innerHTML = `${target[key]}`
                 }
             }
         });

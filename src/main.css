@@ -32,6 +32,10 @@ a, a:hover{
 	text-decoration: none;
 }
 
+[name="brand"]{
+    color: white;
+}
+
 #navbar-brand, #languageSelector {
 	padding-left: 10px;
 	padding-right: 10px;
