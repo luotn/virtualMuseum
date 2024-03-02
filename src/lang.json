@@ -11,9 +11,13 @@
                 "teapot": "五代耀州窑青釉刻花提梁倒流壶",
                 "teapot-description": "又称青釉提梁倒注瓷壶，是五代时期的瓷器，1968年出土于陕西彬县，现藏陕西历史博物馆。",
                 "dongbu": "东布壶",
-                "dongbu-description": "具有结实耐用，便于游牧携带的特点。为蒙古民族喜用的盛奶茶及酒的器皿，现藏于中国民族博物馆。",
+                "dongbu-description": "具有结实耐用，便于游牧携带。为蒙古民族喜用的盛奶茶及酒的器皿，现藏于中国民族博物馆。",
                 "cup": "公道杯",
-                "cup-description": "亦名九龙杯或戒贪杯，用九龙杯饮酒之时，只要不斟满则与常杯无异。若斟得太满则酒会从底孔完全流光。",
+                "cup-description": "亦名九龙杯或戒贪杯，只要不斟满则与常杯无异。若斟得太满则酒会从底孔完全流光。",
+                "bucket": "包银木奶桶",
+                "bucket-description": "整体用三根编制木藤条包住木桶，外侧面与桶盖镶有打制银片包裹。现藏于中国民族博物馆。",
+                "teacup": "米黄地五彩花鸟纹盏托",
+                "teacup-description": "由盏、托两部分组成，清康熙年间制。现藏于中国民族博物馆。",
                 "items": "物品",
                 "fails": "限制和挑战"
             },
@@ -28,6 +32,10 @@
                 "dongbu-description": "By the mongolian ethnic. Durable, easy to carry wine and milk tea for nomads. Now in Chinese National Museum of Ethnology.",
                 "cup": "Cup of Justice",
                 "cup-description": "Also known as Pythagorean cup or Greedy Cup. When it is filled beyond a certain point, a siphoning effect causes the cup to drain its entire contents through the base.",
+                "bucket": "Silver Claded Wooden Milk Bucket",
+                "bucket-description": "Three woven wooden rattans wrapped bucket with silver inlaided sides and lid. Now in Chinese National Museum of Ethnology.",
+                "teacup": "Ivory-White Ground with Polychrome Floral and Bird Pattern Teacup and Saucer Set",
+                "teacup-description": "Made during the Kangxi period of the Qing Dynasty.  Now in Chinese National Museum of Ethnology.",
                 "items": "Items",
                 "fails": "Limitation and Challenges"
             }
@@ -65,6 +73,18 @@
                     "description": "cup_cn.html",
                     "preview": "cup-ar.png",
                     "model": "公道杯.usdz"
+                },
+                "bucket": {
+                    "name": "bucket",
+                    "description": "bucket_cn.html",
+                    "preview": "bucket.png",
+                    "model": "包银木奶桶.usdz"
+                },
+                "teacup": {
+                    "name": "teacup",
+                    "description": "teacup_cn.html",
+                    "preview": "teacup.png",
+                    "model": "米黄地五彩花鸟纹盏托.usdz"
                 }
             }
         }
