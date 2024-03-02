@@ -18,8 +18,15 @@
                 "bucket-description": "整体用三根编制木藤条包住木桶，外侧面与桶盖镶有打制银片包裹。现藏于中国民族博物馆。",
                 "teacup": "米黄地五彩花鸟纹盏托",
                 "teacup-description": "由盏、托两部分组成，清康熙年间制。现藏于中国民族博物馆。",
-                "items": "物品",
-                "fails": "限制和挑战"
+                "fails": "限制和挑战",
+                "dog": "西高地梗长毛玩偶",
+                "dog-description": "本工作流程对带有毛发的物体扫描效果欠佳。为取得最佳效果，请通过建模软件（如Blender）合成毛发。",
+                "minion": "\"神偷奶爸\" - 小黄人公仔",
+                "minion-description": "本工作流程对无明显颜色变化的物体扫描效果欠佳。为取得最佳效果，请通过建模软件进行建模或对已有模型进行修改。",
+                "sp": "\"泡泡玛特\" - Skull Panda摆件",
+                "sp-description": "请保证包含精细结构的物体有足够的信息供算法计算几何结构。但可以通过建模软件进行建模或对已有模型进行修改。",
+                "bowl": "錾金银碗",
+                "bowl-description": "请保证从环绕物体的每个角度都进行拍摄，某角度（如底部）缺失信息可能会导致算法无法重建正确的三维结构。"
             },
             "en": {
                 "title": "Virtual Museum Demo",
@@ -36,8 +43,15 @@
                 "bucket-description": "Three woven wooden rattans wrapped bucket with silver inlaided sides and lid. Now in Chinese National Museum of Ethnology.",
                 "teacup": "Ivory-White Ground with Polychrome Floral and Bird Pattern Teacup and Saucer Set",
                 "teacup-description": "Made during the Kangxi period of the Qing Dynasty.  Now in Chinese National Museum of Ethnology.",
-                "items": "Items",
-                "fails": "Limitation and Challenges"
+                "fails": "Limitation and Challenges",
+                "dog": "West Highland Terrier Plush",
+                "dog-description": "This workflow does not perform well on objects with hair. For best results, synthesize hair through modeling software such as Blender.",
+                "minion": "\"Despicable Me\" - Minion Doll",
+                "minion-description": "This workflow has poor scanning results for objects without obvious color changes. For best results, model using modeling software or modify an existing model.",
+                "sp": "\"Popmart\" - Skull Panda Figure",
+                "sp-description": "Please ensure that objects containing fine structures have enough information for the algorithm to calculate the geometric structure. However, modeling can be done through modeling software or existing models can be modified.",
+                "bowl": "Chiseled Gold Silver Bowl",
+                "bowl-description": "Please make sure to take photos from every angle around the object. Missing information from an angle (in this example the bottom) may cause the algorithm unable to reconstruct the correct three-dimensional structure."
             }
         },
         "detail": {

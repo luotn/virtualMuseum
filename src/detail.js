@@ -21,6 +21,10 @@ function changeDescription(lang, target) {
         target = target["wrong"];
     }
     console.log("Viewing: " + target.name + " in " + lang);
+
+    let backurl = document.querySelector("[name=\"brand\"]").href;
+    backurl = backurl + "#" + target.name;
+    document.querySelector("[name=\"brand\"]").href = backurl;
     
     document.getElementById("description-body").src = descriptionurl 
         + target.description.replace("cn", lang);

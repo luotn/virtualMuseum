@@ -28,7 +28,7 @@
                     <div class="accordion-body">
                         <div class="container text-center">
                             <div class="row justify-content-center">
-                                <div class="card col-md-3" style="width: 18rem;">
+                                <div class="card col-md-3" style="width: 18rem;" id="teapot">
                                     <img src="/public/img/teapot.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title" name="teapot">Teapot</h5>
@@ -36,8 +36,7 @@
                                         <a href="detail.html?viewing=teapot" class="btn btn-primary" name="more_detail">More Detail</a>
                                     </div>
                                 </div>
-        
-                                <div class="card col-md-3" style="width: 18rem;">
+                                <div class="card col-md-3" style="width: 18rem;" id="dongbu">
                                     <img src="/public/img/dongbu.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title" name="dongbu">Dongbu Kettle</h5>
@@ -45,7 +44,7 @@
                                         <a href="detail.html?viewing=dongbu" class="btn btn-primary" name="more_detail">More Detail</a>
                                     </div>
                                 </div>
-                                <div class="card col-md-3" style="width: 18rem;">
+                                <div class="card col-md-3" style="width: 18rem;" id="cup">
                                     <img src="/public/img/cup.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title" name="cup">Dongbu Kettle</h5>
@@ -53,7 +52,7 @@
                                         <a href="detail.html?viewing=cup" class="btn btn-primary" name="more_detail">More Detail</a>
                                     </div>
                                 </div>
-                                <div class="card col-md-3" style="width: 18rem;">
+                                <div class="card col-md-3" style="width: 18rem;" id="bucket">
                                     <img src="/public/img/bucket.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title" name="bucket">Silver claded Wooden Milk Bucket</h5>
@@ -61,7 +60,7 @@
                                         <a href="detail.html?viewing=bucket" class="btn btn-primary" name="more_detail">More Detail</a>
                                     </div>
                                 </div>
-                                <div class="card col-md-3" style="width: 18rem;">
+                                <div class="card col-md-3" style="width: 18rem;" id="teacup">
                                     <img src="/public/img/teacup.png" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title" name="teacup">Ivory-White Ground with Polychrome Floral and Bird Pattern Teacup and Saucer Set</h5>
@@ -70,34 +69,61 @@
                                     </div>
                                 </div>
                             </div>
-                          </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" name="items" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button collapsed" name="fails" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Items
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#muti">
                     <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-            </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" name="fails" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Fails
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#muti">
-                    <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <div class="container text-center">
+                            <div class="row justify-content-center">
+                                <div class="card col-md-3" style="width: 18rem;" id="dog">
+                                    <a href="/public/models/usdz/屁妞的屁妞.usdz" rel="ar" id="ar-model">
+                                        <img src="/public/img/piniu.png" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title" name="dog">Dog</h5>
+                                        <p class="card-text" name="dog-description">Dog Description</p>
+                                    </div>
+                                </div>
+                                <div class="card col-md-3" style="width: 18rem;" id="minion">
+                                    <a href="/public/models/usdz/软小黄人_高光照.usdz" rel="ar" id="ar-model">
+                                        <img src="/public/img/minion.png" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title" name="minion">Minion</h5>
+                                        <p class="card-text" name="minion-description">Minion Description</p>
+                                    </div>
+                                </div>
+                                <div class="card col-md-3" style="width: 18rem;" id="sp">
+                                    <a href="/public/models/usdz/SP.usdz" rel="ar" id="ar-model">
+                                        <img src="/public/img/sp.png" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title" name="sp">Skull Panda</h5>
+                                        <p class="card-text" name="sp-description">Skull Panda Description</p>
+                                    </div>
+                                </div>
+                                <div class="card col-md-3" style="width: 18rem;" id="bowl">
+                                    <a href="/public/models/usdz/錾金银碗.usdz" rel="ar" id="ar-model">
+                                        <img src="/public/img/錾金银碗.png" class="card-img-top" alt="...">
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title" name="bowl">Chiseled Gold Silver Bowl</h5>
+                                        <p class="card-text" name="bowl-description">Chiseled Gold Silver Bowl Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
-                </div>
+            </div>
             </div>
         </div>
 
