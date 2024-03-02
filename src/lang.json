@@ -57,11 +57,11 @@
         "detail": {
             "cn": {
                 "title": "虚拟博物馆演示 - 详情页",
-                "brand": "虚拟博物馆"                
+                "brand": "虚拟博物馆 - 详情"
             },
             "en": {
                 "title": "Virtual Museum Demo - Details",
-                "brand": "Virtual Museum"
+                "brand": "Virtual Museum - Details"
             },
             "exhibits": {
                 "wrong": {
