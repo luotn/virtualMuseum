@@ -1,7 +1,7 @@
 let viewing = "";
-let modelurl = "/public/models/usdz/";
-let previewurl = "/public/img/";
-let descriptionurl = "/src/exhibits/";
+let modelurl = "./public/models/usdz/";
+let previewurl = "./public/img/";
+let descriptionurl = "./src/exhibits/";
 
 function getViewing() {
     viewing = new URLSearchParams(window.location.search).get("viewing");
