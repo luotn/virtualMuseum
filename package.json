@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/luotn/virtualMuseum/issues"
   },
-  "homepage": "https://github.com/luotn/virtualMuseum#readme",
-  "dependencies": {
-    "three": "^0.163.0"
-  }
+  "homepage": "https://github.com/luotn/virtualMuseum#readme"
 }

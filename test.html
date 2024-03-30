@@ -19,8 +19,8 @@
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "./node_modules/three/build/three.module.js",
-					"three/addons/": "./node_modules/three/examples/jsm/"
+					"three": "./src/three/three.module.js",
+					"three/addons/": "./src/three/"
 				}
 			}
 		</script>
@@ -54,7 +54,7 @@
 
 				const controls = new OrbitControls( camera, renderer.domElement );
 				controls.minDistance = 0.1;
-				controls.maxDistance = 0.3;
+				controls.maxDistance = 0.2;
 				// controls.target.y = 15;
 				controls.update();
 
