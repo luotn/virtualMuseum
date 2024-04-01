@@ -5,6 +5,17 @@ let descriptionurl = "./src/exhibits/";
 
 function getViewing() {
     viewing = new URLSearchParams(window.location.search).get("viewing");
+    let compatiable = arKitCompatiable();
+    // alert(compatiable);
+}
+
+function arKitCompatiable() {
+    let ua = window.navigator.userAgent;
+    if (ua.match(/iPhone/) || ua.match(/iPad/) || (ua.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
+        return true;
+    } 
+
+    return false;
 }
 
 function changeDescription(lang, target) {
