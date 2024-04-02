@@ -5,20 +5,23 @@ let descriptionurl = "./src/exhibits/";
 
 function getViewing() {
     viewing = new URLSearchParams(window.location.search).get("viewing");
-    let compatiable = arKitCompatiable();
-    // alert(compatiable);
+    localStorage.setItem('ARQuickLookCompatiable', arQuickLookCompatiable());
 }
 
-function arKitCompatiable() {
+function arQuickLookCompatiable() {
     let ua = window.navigator.userAgent;
+    // Make sure user device is iphone or ipad. @TODO Add Apple Vision Pro support
     if (ua.match(/iPhone/) || ua.match(/iPad/) || (ua.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2)) {
-        return true;
-    } 
+        // Confirm IOS version
+        let osVersion = parseInt(ua.substring(ua.indexOf("Version/") + 8, ua.indexOf("Version/") + 10))
+        return osVersion >= 12;
+    }
 
     return false;
 }
 
 function changeDescription(lang, target) {
+    let tooltip = target;
     target = target.exhibits;
 
     for (let temp in target) {
@@ -39,13 +42,24 @@ function changeDescription(lang, target) {
     
     document.getElementById("description-body").src = descriptionurl 
         + target.description.replace("cn", lang);
-    document.getElementById("ar-model").href = modelurl + target.model;
+    
+    if ((/true/).test(localStorage.getItem('ARQuickLookCompatiable'))) {
+        document.getElementById("ar-model").href = modelurl + target.model;
+        if (lang == "cn") {document.getElementById("ar-tooltip").innerHTML = tooltip.ar_tooltip.cn;}
+        else if(lang === 'en') {document.getElementById("ar-tooltip").innerHTML = tooltip.ar_tooltip.en;}
+    } else {
+        document.getElementById("ar-model").href = "";
+        document.getElementById("ar-tooltip").innerHTML = "";
+    }
+    
+    if(lang === 'cn')
+        document.getElementById("viewerButton").innerHTML = tooltip.viewerButton.cn;
+    else if(lang === 'en')
+        document.getElementById("viewerButton").innerHTML = tooltip.viewerButton.en;
+
     document.getElementById("ar-preview").src = previewurl + target.preview;
-    resizeIFrameToFitContent(document.getElementById( 'description-body' ));
 }
 
-function resizeIFrameToFitContent( iFrame ) {
-
-    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-    iFrame.height = iFrame.contentWindow.document.body.scrollHeight + 200;
+function view() {
+    window.open("./viewer.html?viewing=" + viewing)
 }

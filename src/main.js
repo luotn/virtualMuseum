@@ -35,13 +35,15 @@ function changeTo(lang, page)
     fetch("./src/lang.json")
         .then(response => response.json())
         .then(langObj => {
-            let target = langObj.pages;
+            let target = langObj.pages;            
             if(page === 'index')
                 target = target.index;
             else if (page === 'detail') {
                 target = target.detail;
                 changeDescription(lang, target);
-            }
+            } else if (page === 'viewer')
+                target = target.viewer;
+
 
             if(lang === 'cn')
                 target = target.cn;

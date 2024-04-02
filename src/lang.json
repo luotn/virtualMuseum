@@ -63,6 +63,14 @@
                 "title": "Virtual Museum Demo - Details",
                 "brand": "Virtual Museum - Details"
             },
+            "ar_tooltip": {
+                "cn": "点击上方图片在现实中查看模型，或点击下方在虚拟环境中查看模型。",
+                "en": "Click image above to view model in real world, or click below to view in virtual environment."
+            },
+            "viewerButton": {
+                "cn": "在虚拟环境中查看模型",
+                "en": "View model in virtual environment"
+            },
             "exhibits": {
                 "wrong": {
                     "name": "wrong",
@@ -100,6 +108,16 @@
                     "preview": "teacup.png",
                     "model": "米黄地五彩花鸟纹盏托.usdz"
                 }
+            }
+        },
+        "viewer": {
+            "cn": {
+                "title": "虚拟博物馆演示 - 查看器",
+                "brand": "虚拟博物馆 - 查看器"
+            },
+            "en": {
+                "title": "Virtual Museum Demo - Viewer",
+                "brand": "Virtual Museum - Viewer"
             }
         }
     }
