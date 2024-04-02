@@ -46,7 +46,7 @@
 			import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 			import { USDZLoader } from 'three/addons/loaders/USDZLoader.js';
 
-			let camera, scene, renderer;
+			let camera, scene, renderer, viewing;
 
 			init();
 			animate();
@@ -67,7 +67,7 @@
 
 				const controls = new OrbitControls( camera, renderer.domElement );
 				controls.minDistance = 0.1;
-				controls.maxDistance = 0.2;
+				controls.maxDistance = 0.5;
 				// controls.target.y = 15;
 				controls.update();
 
@@ -77,9 +77,16 @@
 				const usdzLoader = new USDZLoader()
 					.setPath( './public/models/usdz/' );
 
+				var data = await getJSON()
+				let models = data.pages.detail.exhibits;
+				viewing = new URLSearchParams(window.location.search).get("viewing");
+				for (let temp in models) {
+					if(temp == viewing)
+						models = models[`${temp}`];
+				}
 				const [ texture, model ] = await Promise.all( [
 					rgbeLoader.loadAsync( 'Bruynzeel_room_museum.hdr' ),
-					usdzLoader.loadAsync( '倒装壶（带底）.usdz' ),
+					usdzLoader.loadAsync( models.model ),
 				] );
 
 				// environment
@@ -116,6 +123,12 @@
 
 				renderer.render( scene, camera );
 
+			}
+
+			async function getJSON() {
+				const response = await fetch("./src/lang.json");
+				const json = await response.json();
+				return json;
 			}
 
 		</script>

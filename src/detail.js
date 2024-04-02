@@ -61,5 +61,5 @@ function changeDescription(lang, target) {
 }
 
 function view() {
-    window.open("./viewer.html?viewing=" + viewing)
+    window.open("./viewer.html?viewing=" + viewing, '_self')
 }
