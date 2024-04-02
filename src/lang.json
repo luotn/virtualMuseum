@@ -113,11 +113,13 @@
         "viewer": {
             "cn": {
                 "title": "虚拟博物馆演示 - 查看器",
-                "brand": "虚拟博物馆 - 查看器"
+                "brand": "虚拟博物馆 - 查看器",
+                "footer": "左键/单指旋转，右键/双指拖移，滚轮缩放。"
             },
             "en": {
                 "title": "Virtual Museum Demo - Viewer",
-                "brand": "Virtual Museum - Viewer"
+                "brand": "Virtual Museum - Viewer",
+                "footer": "Left click / one finger: rotate, right click / two fingers: move，scroll wheel: resize."
             }
         }
     }
