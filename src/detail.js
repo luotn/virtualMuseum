@@ -52,11 +52,13 @@ function changeDescription(lang, target) {
         document.getElementById("ar-tooltip").innerHTML = "";
     }
     
-    if(lang === 'cn')
+    if(lang === 'cn') {
         document.getElementById("viewerButton").innerHTML = tooltip.viewerButton.cn;
-    else if(lang === 'en')
+        document.getElementById("usda").innerHTML = tooltip.usda.cn;
+    } else if(lang === 'en') {
         document.getElementById("viewerButton").innerHTML = tooltip.viewerButton.en;
-
+        document.getElementById("usda").innerHTML = tooltip.usda.en;
+    }
     document.getElementById("ar-preview").src = previewurl + target.preview;
 }
 

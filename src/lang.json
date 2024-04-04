@@ -71,6 +71,10 @@
                 "cn": "在虚拟环境中查看模型",
                 "en": "View model in virtual environment"
             },
+            "usda": {
+                "cn": "虚拟环境的模型已通过USDZ Tools后期加工。",
+                "en": "USDZ Tools used to process model in virtual environment."
+            },
             "exhibits": {
                 "wrong": {
                     "name": "wrong",

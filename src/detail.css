@@ -32,7 +32,7 @@ a, a:hover{
 	text-decoration: none;
 }
 
-#ar-tooltip{
-    margin-left: 10px;
-    margin-right: 10px;
+#ar-tooltip, #usda{
+    margin: 5px;
+    font-size: smaller;
 }
